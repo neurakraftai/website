@@ -1753,3 +1753,64 @@ footer {
         font-size: 1.4rem;
     }
 }
+
+.email-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.email-status.success {
+    display: block;
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border-left: 4px solid #2ecc71;
+}
+
+.email-status.error {
+    display: block;
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border-left: 4px solid #e74c3c;
+}
+
+.email-status.loading {
+    display: block;
+    background-color: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+    border-left: 4px solid #3498db;
+}
+
+/* Button loading state */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-loading span, .btn-loading i {
+    visibility: hidden;
+}
+
+.btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
