@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace "YOUR_PUBLIC_KEY" with your actual EmailJS public key
+            emailjs.init("MZpY0Otarq1SsWAVh");
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -88,7 +95,7 @@
                 <div class="about-image reveal-right">
                     <div class="image-container">
                         <div class="image-overlay"></div>
-                        <img src="AI_Image1.jpg" alt="AI Development Team">
+                        <img src="images\AI_Image1.jpg" alt="AI Development Team">
                     </div>
                 </div>
             </div>
@@ -275,6 +282,21 @@
                     </div>
                     <div class="project-overlay"></div>
                 </div>
+
+                <!-- Project 7 -->
+                <div class="project-card" data-color="purple">
+                    <div class="project-content">
+                        <h3>XVC Tech</h3>
+                        <p>Multimodal healthcare diagnostic chatbot.</p>
+                        <div class="project-tags">
+                            <span>NLP</span>
+                            <span>Computer Vision</span>
+                            <span>Deep Learning</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay"></div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -308,7 +330,7 @@
                 <!-- Team Member 2 -->
                 <div class="team-card reveal-up" style="animation-delay: 0.2s;">
                     <div class="member-image">
-                        <img src="Image_R3.jpg" alt="Ramya Ramakrishnan">
+                        <img src="images\Image_R3.jpg" alt="Ramya Ramakrishnan">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="member-info">
@@ -388,6 +410,7 @@
                             <span>Send Message</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
+                        <div id="emailStatus" class="email-status"></div>
                     </form>
                 </div>
             </div>
