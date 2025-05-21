@@ -178,21 +178,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to handle form submission
     function handleFormSubmission() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Normally, you would send this data to a server
-        // For now, we'll just log it and show a success message
-        console.log('Form submitted:', { name, email, subject, message });
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Show success message (in a real site, you'd handle this better)
-        alert('Message sent successfully! We will get back to you soon.');
+        const contactForm = document.getElementById('contactForm');
+        const statusElement = document.getElementById('emailStatus');
+    
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+            
+                // Get the submit button
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+                // Show loading state
+                submitButton.classList.add('btn-loading');
+                statusElement.className = 'email-status loading';
+                statusElement.textContent = 'Sending message...';
+                statusElement.style.display = 'block';
+            
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+            
+                // Prepare template parameters
+                const templateParams = {
+                    from_name: name,
+                    email_id: email,
+                    subject: subject,
+                    message: message
+                };
+            
+                // Send email using EmailJS
+                // Your service and template IDs are already included
+                emailjs.send('service_3vja9qm', 'template_4f1lnn4', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                    
+                        // Show success message
+                        statusElement.className = 'email-status success';
+                        statusElement.textContent = 'Message sent successfully! We will get back to you soon.';
+                    
+                        // Reset form
+                        contactForm.reset();
+                    
+                        // Reset form fields' focus effects
+                        const focusEffects = contactForm.querySelectorAll('.input-focus-effect');
+                        focusEffects.forEach(effect => {
+                            effect.style.width = '0';
+                        });
+                    
+                        // Remove loading state
+                        submitButton.classList.remove('btn-loading');
+                    
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            statusElement.style.display = 'none';
+                        }, 5000);
+                    })
+                    .catch(function(error) {
+                        console.log('FAILED...', error);
+                    
+                        // Show error message
+                        statusElement.className = 'email-status error';
+                        statusElement.textContent = 'Oops! Something went wrong. Please try again later.';
+                    
+                        // Remove loading state
+                    submitButton.classList.remove('btn-loading');
+                });
+            });
+        }
     }
+
+    // Call the function to initialize the form handler
+    handleFormSubmission();
 
     // Project card hover effects
     const projectCards = document.querySelectorAll('.project-card');
