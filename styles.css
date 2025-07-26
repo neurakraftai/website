@@ -6,7 +6,8 @@
 /* ----------- Base Styles ------------ */
 :root {
     /* Main color palette */
-    --primary-color: #6f42c1;      /* Purple */
+/*     --primary-color: #6f42c1;      /* Purple */ 
+    --primary-color: #69D4D8;
     --secondary-color: #3498db;    /* Blue */
     --tertiary-color: #2ecc71;     /* Green */
     --accent-color-1: #f39c12;     /* Yellow */
