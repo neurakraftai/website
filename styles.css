@@ -7,8 +7,8 @@
 :root {
     /* Main color palette */
 /*     --primary-color: #6f42c1;      /* Purple */ 
-    --primary-color: #69D4D8;
-    --secondary-color: #3498db;    /* Blue */
+    --primary-color: #69D4D8;     /*Cyna */
+    --secondary-color: #6679E5   /* #3498db; Blue */
     --tertiary-color: #2ecc71;     /* Green */
     --accent-color-1: #f39c12;     /* Yellow */
     --accent-color-2: #e74c3c;     /* Red */
