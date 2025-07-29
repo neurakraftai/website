@@ -224,10 +224,12 @@ nav.scrolled {
 .nav-links ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 .nav-links ul li a {
@@ -238,8 +240,10 @@ nav.scrolled {
     transition: all var(--transition-fast) ease;
     position: relative;
     padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-
 .nav-links ul li a::after {
     content: '';
     position: absolute;
