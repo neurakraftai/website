@@ -6,6 +6,7 @@
     <title>Neurakraft - Your AI Team. On Demand.</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/stats.css">
+    <link rel="stylesheet" href="styles/industries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -30,6 +31,81 @@
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-industry="healthcare">
+                                <i class="fas fa-heartbeat"></i>
+                                <div>
+                                    <span>Healthcare</span>
+                                    <small>Diagnostics, AI chatbots</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="finance">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <span>Finance & Banking</span>
+                                    <small>Fraud detection, Trading</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="manufacturing">
+                                <i class="fas fa-industry"></i>
+                                <div>
+                                    <span>Manufacturing</span>
+                                    <small>Predictive maintenance, Automation</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="retail">
+                                <i class="fas fa-shopping-cart"></i>
+                                <div>
+                                    <span>Retail & E-Commerce</span>
+                                    <small>Recommendations, Analytics</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="education">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <span>Education</span>
+                                    <small>Personalized learning, AI tutors</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="entertainment">
+                                <i class="fas fa-film"></i>
+                                <div>
+                                    <span>Entertainment</span>
+                                    <small>Voice cloning, Music production</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="agriculture">
+                                <i class="fas fa-seedling"></i>
+                                <div>
+                                    <span>Agriculture</span>
+                                    <small>Smart farming, Robotics</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="telecommunications">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span>Telecommunications</span>
+                                    <small>Call analysis, Voice assistants</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="travel">
+                                <i class="fas fa-plane"></i>
+                                <div>
+                                    <span>Travel & Hospitality</span>
+                                    <small>Dynamic pricing, Virtual concierges</small>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item" data-industry="sports">
+                                <i class="fas fa-running"></i>
+                                <div>
+                                    <span>Sports & Fitness</span>
+                                    <small>Performance tracking, Analytics</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -511,6 +587,7 @@
     <!-- Script -->
     <script src="scripts/script.js"></script>
     <script src="scripts/stats.js"></script>
+    <script src="scripts/industries.js"></script>
 
         <!-- Project Modal Popup -->
     <div class="project-modal" id="projectModal">
