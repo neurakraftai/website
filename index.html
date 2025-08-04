@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/stats.css">
     <link rel="stylesheet" href="styles/industries.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -307,16 +309,20 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Featured Projects Section -->
     <section id="projects" class="projects">
         <div class="section-container">
             <div class="section-header">
-                <h2>Our Projects</h2>
+                <h2>Featured Projects</h2>
                 <div class="underline"></div>
             </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-color="purple">
+            <div class="featured-projects-grid">
+                <!-- Featured Project 1 -->
+                <div class="project-card" data-project="pitch-innovation">
+                    <div class="project-image">
+                        <img src="assets/pitchinnovation.webp" alt="Pitch Innovation">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
                         <h3>Pitch Innovation</h3>
                         <p>Production-grade voice cloning technology for movies and songs, plus AI tools for music production.</p>
@@ -326,25 +332,32 @@
                             <span>Music Production</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card" data-color="green">
+                <!-- Featured Project 2 - RAG QnA Bot -->
+                <div class="project-card" data-project="rag-qna-bot">
+                    <div class="project-image">
+                        <img src="assets\RAG_1.jpg" alt="RAG QnA Bot">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
-                        <h3>Nunnari Labs</h3>
-                        <p>Unmanned Ground Vehicle (UGV) for weed removal in farms using deep learning.</p>
+                        <h3>RAG QnA Bot</h3>
+                        <p>Intelligent document analysis system that allows users to upload multiple files and get instant answers through advanced RAG technology.</p>
                         <div class="project-tags">
-                            <span>Robotics</span>
-                            <span>Computer Vision</span>
-                            <span>Machine Learning</span>
+                            <span>RAG</span>
+                            <span>Document Analysis</span>
+                            <span>AI</span>
+                            <span>NLP</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" data-color="blue">
+                <!-- Featured Project 3 -->
+                <div class="project-card" data-project="pulse-telesystems">
+                    <div class="project-image">
+                        <img src="assets/PulseTelesystems.png" alt="Pulse Telesystems">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
                         <h3>Pulse Telesystems</h3>
                         <p>Voice caller assistants, automatic call answerers, and systems for call analysis and scoring.</p>
@@ -354,25 +367,14 @@
                             <span>Data Analysis</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card" data-color="yellow">
-                    <div class="project-content">
-                        <h3>Envise</h3>
-                        <p>Mobile app for tennis analysis and coaching with performance tracking.</p>
-                        <div class="project-tags">
-                            <span>Mobile Development</span>
-                            <span>Sports Analytics</span>
-                            <span>UX Design</span>
-                        </div>
+                <!-- Featured Project 4 -->
+                <div class="project-card" data-project="creatorsmeet">
+                    <div class="project-image">
+                        <img src="assets/creatormeets.webp" alt="CreatorsMeet">
+                        <div class="project-overlay"></div>
                     </div>
-                    <div class="project-overlay"></div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-color="pink">
                     <div class="project-content">
                         <h3>CreatorsMeet</h3>
                         <p>Recommendation and matching algorithms to connect influencers with businesses.</p>
@@ -382,11 +384,46 @@
                             <span>Influencer Marketing</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card" data-color="red">
+                <!-- Additional Featured Projects (Hidden Initially) -->
+                <div class="project-card additional-project" data-project="nunnari-labs" style="display: none;">
+                    <div class="project-image">
+                        <img src="assets/NunnariLabs.jpg" alt="Nunnari Labs">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Nunnari Labs</h3>
+                        <p>Unmanned Ground Vehicle (UGV) for weed removal in farms using deep learning.</p>
+                        <div class="project-tags">
+                            <span>Robotics</span>
+                            <span>Computer Vision</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card additional-project" data-project="envise" style="display: none;">
+                    <div class="project-image">
+                        <img src="assets/tennis.jpg" alt="Envise">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Envise</h3>
+                        <p>Mobile app for tennis analysis and coaching with performance tracking.</p>
+                        <div class="project-tags">
+                            <span>Mobile Development</span>
+                            <span>Sports Analytics</span>
+                            <span>UX Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card additional-project" data-project="jl-associates" style="display: none;">
+                    <div class="project-image">
+                        <img src="assets/JLAssociates.webp" alt="J&L Associates">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
                         <h3>J&L Associates</h3>
                         <p>Market analysis and development of AI automation tools.</p>
@@ -396,23 +433,30 @@
                             <span>Business Intelligence</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
 
-                <!-- Project 7 -->
-                <div class="project-card" data-color="purple">
+                <div class="project-card additional-project" data-project="healthcare-bot" style="display: none;">
+                    <div class="project-image">
+                        <img src="assets/HCbot.webp" alt="XVC Tech">
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
-                        <h3>Healthcare Assistant</h3>
-                        <p>Multimodal healthcare diagnostic chatbot.</p>
+                        <h3>Multimodal Healthcare Diagnostic Assistant</h3>
+                        <p>NLP and Image based healthcare diagnostic chatbot.</p>
                         <div class="project-tags">
                             <span>NLP</span>
                             <span>Computer Vision</span>
                             <span>Deep Learning</span>
                         </div>
                     </div>
-                    <div class="project-overlay"></div>
                 </div>
+            </div>
 
+            <div class="more-projects-section">
+                <button id="viewMoreBtn" class="btn btn-secondary">
+                    <span>View More Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -584,12 +628,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Script -->
-    <script src="scripts/script.js"></script>
-    <script src="scripts/stats.js"></script>
-    <script src="scripts/industries.js"></script>
-
-        <!-- Project Modal Popup -->
+        <!-- Project Modal -->
     <div class="project-modal" id="projectModal">
         <div class="modal-overlay"></div>
         <div class="modal-container">
@@ -599,16 +638,31 @@
             <div class="modal-content">
                 <h2 id="modalTitle"></h2>
                 <div class="modal-description" id="modalDescription"></div>
-                <div class="modal-tags" id="modalTags"></div>
-                <div class="modal-cta">
-<!--                     <a href="#" class="btn btn-primary" id="modalCta">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a> -->
+                <div class="modal-details">
+                    <div class="modal-section">
+                        <h4>Technologies Used</h4>
+                        <div class="modal-technologies" id="modalTechnologies"></div>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Challenge</h4>
+                        <p id="modalChallenge"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>Our Solution</h4>
+                        <p id="modalSolution"></p>
+                    </div>
                 </div>
+                <div class="modal-tags" id="modalTags"></div>
             </div>
         </div>
     </div>
+
+    <!-- Script -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/industries.js"></script>
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/modal.js"></script>
     
 </body>
 </html>
